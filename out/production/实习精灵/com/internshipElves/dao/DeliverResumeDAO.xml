@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.internshipElves.dao.DeliverResumeDAO">
+  <resultMap id="BaseResultMap" type="com.internshipElves.entity.DeliverResume">
+    <id column="deliver_resume_id" jdbcType="INTEGER" property="deliverResumeId" />
+    <id column="stu_id" jdbcType="INTEGER" property="stuId" />
+    <result column="com_id" jdbcType="INTEGER" property="comId" />
+    <result column="resume_id" jdbcType="INTEGER" property="resumeId" />
+    <result column="deliver_resume_time" jdbcType="DATE" property="deliverResumeTime" />
+    <result column=" deliver_resume_status" jdbcType="INTEGER" property="deliverResumeStatus" />
+    <result column="deliver_prepare_a" jdbcType="VARCHAR" property="deliverPrepareA" />
+    <result column="deliver_prepare_b" jdbcType="VARCHAR" property="deliverPrepareB" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    deliver_resume_id, stu_id, com_id, resume_id, deliver_resume_time, ` deliver_resume_status`, 
+    deliver_prepare_a, deliver_prepare_b
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="com.internshipElves.entity.DeliverResumeKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from deliver_resume
+    where deliver_resume_id = #{deliverResumeId,jdbcType=INTEGER}
+      and stu_id = #{stuId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.internshipElves.entity.DeliverResumeKey">
+    delete from deliver_resume
+    where deliver_resume_id = #{deliverResumeId,jdbcType=INTEGER}
+      and stu_id = #{stuId,jdbcType=INTEGER}
+  </delete>
+
+
+
+
+
+  <!-- 根据投递状态id和学生id查询投递状态 -->
+  <select id="queryByPrimaryKey" parameterType="com.internshipElves.entity.DeliverResumeKey" resultMap="BaseResultMap">
+    select
+    com_id, resume_id, deliver_resume_time, ` deliver_resume_status`
+    from deliver_resume
+    where deliver_resume_id = #{deliverResumeId,jdbcType=INTEGER}
+    and stu_id = #{stuId,jdbcType=INTEGER}
+  </select>
+
+
+
+  <!-- 根据学生id查询简历状态 -->
+  <select id="queryByStuId" parameterType="INTEGER" resultMap="BaseResultMap">
+    select
+    com_id, resume_id, deliver_resume_time, ` deliver_resume_status`, deliver_prepare_a
+    from deliver_resume
+    where
+    stu_id = #{stuId,jdbcType=INTEGER}
+
+  </select>
+
+
+  <!-- 根据学生id和状态查询简历状态 -->
+  <select id="queryByStuIdAndStatus" parameterType="INTEGER" resultMap="BaseResultMap">
+    select
+    deliver_resume_id,com_id, resume_id, deliver_resume_time, ` deliver_resume_status`,deliver_prepare_a
+    from deliver_resume
+    where stu_id = #{stuId}
+    AND (case when #{status} != 0 then(` deliver_resume_status`  = #{status}) else (1=1) end)
+  </select>
+
+  <!-- 根据公司id和状态查询简历状态 -->
+  <select id="queryByComIdAndStatus" parameterType="INTEGER" resultMap="BaseResultMap">
+    select
+    deliver_resume_id,stu_id,com_id, resume_id, deliver_resume_time, ` deliver_resume_status`,deliver_prepare_a
+    from deliver_resume
+    where com_id = #{comId}
+    AND (case when #{status} != 0 then(` deliver_resume_status`  = #{status}) else (1=1) end)
+  </select>
+
+  <!-- 根据主键修改简历状态 -->
+  <update id="updateByPrimaryKey">
+    update deliver_resume
+    set
+    ` deliver_resume_status` = #{deliverResumeStatus},
+    deliver_resume_time = #{deliverResumeTime}
+
+    where deliver_resume_id = #{deliverResumeId}
+
+  </update>
+
+
+
+  <!-- 根据简历id查询简历状态 -->
+  <select id="queryByPreparaA"  resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from deliver_resume
+    where
+    stu_id = #{stuId} and
+    deliver_prepare_a = #{deliverPrepareA,jdbcType=INTEGER}
+  </select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <insert id="insert" parameterType="com.internshipElves.entity.DeliverResume">
+    insert into deliver_resume (deliver_resume_id, stu_id, com_id, 
+      resume_id, deliver_resume_time, ` deliver_resume_status`, 
+      deliver_prepare_a, deliver_prepare_b)
+    values (#{deliverResumeId,jdbcType=INTEGER}, #{stuId,jdbcType=INTEGER}, #{comId,jdbcType=INTEGER}, 
+      #{resumeId,jdbcType=INTEGER}, #{deliverResumeTime,jdbcType=DATE}, #{deliverResumeStatus,jdbcType=INTEGER}, 
+      #{deliverPrepareA,jdbcType=VARCHAR}, #{deliverPrepareB,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.internshipElves.entity.DeliverResume">
+    insert into deliver_resume
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="deliverResumeId != null">
+        deliver_resume_id,
+      </if>
+      <if test="stuId != null">
+        stu_id,
+      </if>
+      <if test="comId != null">
+        com_id,
+      </if>
+      <if test="resumeId != null">
+        resume_id,
+      </if>
+      <if test="deliverResumeTime != null">
+        deliver_resume_time,
+      </if>
+      <if test="deliverResumeStatus != null">
+        ` deliver_resume_status`,
+      </if>
+      <if test="deliverPrepareA != null">
+        deliver_prepare_a,
+      </if>
+      <if test="deliverPrepareB != null">
+        deliver_prepare_b,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="deliverResumeId != null">
+        #{deliverResumeId,jdbcType=INTEGER},
+      </if>
+      <if test="stuId != null">
+        #{stuId,jdbcType=INTEGER},
+      </if>
+      <if test="comId != null">
+        #{comId,jdbcType=INTEGER},
+      </if>
+      <if test="resumeId != null">
+        #{resumeId,jdbcType=INTEGER},
+      </if>
+      <if test="deliverResumeTime != null">
+        #{deliverResumeTime,jdbcType=DATE},
+      </if>
+      <if test="deliverResumeStatus != null">
+        #{deliverResumeStatus,jdbcType=INTEGER},
+      </if>
+      <if test="deliverPrepareA != null">
+        #{deliverPrepareA,jdbcType=VARCHAR},
+      </if>
+      <if test="deliverPrepareB != null">
+        #{deliverPrepareB,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.internshipElves.entity.DeliverResume">
+    update deliver_resume
+    <set>
+      <if test="comId != null">
+        com_id = #{comId,jdbcType=INTEGER},
+      </if>
+      <if test="resumeId != null">
+        resume_id = #{resumeId,jdbcType=INTEGER},
+      </if>
+      <if test="deliverResumeTime != null">
+        deliver_resume_time = #{deliverResumeTime,jdbcType=DATE},
+      </if>
+      <if test="deliverResumeStatus != null">
+        ` deliver_resume_status` = #{deliverResumeStatus,jdbcType=INTEGER},
+      </if>
+      <if test="deliverPrepareA != null">
+        deliver_prepare_a = #{deliverPrepareA,jdbcType=VARCHAR},
+      </if>
+      <if test="deliverPrepareB != null">
+        deliver_prepare_b = #{deliverPrepareB,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where deliver_resume_id = #{deliverResumeId,jdbcType=INTEGER}
+      and stu_id = #{stuId,jdbcType=INTEGER}
+  </update>
+
+</mapper>

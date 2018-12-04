@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.internshipElves.dao.CompanyDAO">
+  <resultMap id="BaseResultMap" type="com.internshipElves.entity.Company">
+    <id column="com_id" jdbcType="INTEGER" property="comId" />
+    <result column="com_pwd" jdbcType="VARCHAR" property="comPwd" />
+    <result column="com_email" jdbcType="VARCHAR" property="comEmail" />
+    <result column="com_release_job_id" jdbcType="INTEGER" property="comReleaseJobId" />
+    <result column="com_message_id" jdbcType="INTEGER" property="comMessageId" />
+    <result column="com_product_id" jdbcType="INTEGER" property="comProductId" />
+    <result column="com_label_id" jdbcType="INTEGER" property="comLabelId" />
+    <result column="com_create_team_id" jdbcType="INTEGER" property="comCreateTeamId" />
+    <result column="com_status" jdbcType="INTEGER" property="comStatus" />
+    <result column="com_create_date" jdbcType="TIMESTAMP" property="comCreateDate" />
+    <result column="company_prepare_a" jdbcType="VARCHAR" property="companyPrepareA" />
+    <result column="company_prepare_b" jdbcType="VARCHAR" property="companyPrepareB" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    com_id, com_pwd, com_email, com_release_job_id, com_message_id, com_product_id, com_label_id, 
+    com_create_team_id, com_status, com_create_date, company_prepare_a, company_prepare_b
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from company
+    where com_id = #{comId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from company
+    where com_id = #{comId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.internshipElves.entity.Company">
+    insert into company (com_id, com_pwd, com_email, 
+      com_release_job_id, com_message_id, com_product_id, 
+      com_label_id, com_create_team_id, com_status, 
+      com_create_date, company_prepare_a, company_prepare_b
+      )
+    values (#{comId,jdbcType=INTEGER}, #{comPwd,jdbcType=VARCHAR}, #{comEmail,jdbcType=VARCHAR}, 
+      #{comReleaseJobId,jdbcType=INTEGER}, #{comMessageId,jdbcType=INTEGER}, #{comProductId,jdbcType=INTEGER}, 
+      #{comLabelId,jdbcType=INTEGER}, #{comCreateTeamId,jdbcType=INTEGER}, #{comStatus,jdbcType=INTEGER}, 
+      #{comCreateDate,jdbcType=TIMESTAMP}, #{companyPrepareA,jdbcType=VARCHAR}, #{companyPrepareB,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.internshipElves.entity.Company">
+    insert into company
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="comId != null">
+        com_id,
+      </if>
+      <if test="comPwd != null">
+        com_pwd,
+      </if>
+      <if test="comEmail != null">
+        com_email,
+      </if>
+      <if test="comReleaseJobId != null">
+        com_release_job_id,
+      </if>
+      <if test="comMessageId != null">
+        com_message_id,
+      </if>
+      <if test="comProductId != null">
+        com_product_id,
+      </if>
+      <if test="comLabelId != null">
+        com_label_id,
+      </if>
+      <if test="comCreateTeamId != null">
+        com_create_team_id,
+      </if>
+      <if test="comStatus != null">
+        com_status,
+      </if>
+      <if test="comCreateDate != null">
+        com_create_date,
+      </if>
+      <if test="companyPrepareA != null">
+        company_prepare_a,
+      </if>
+      <if test="companyPrepareB != null">
+        company_prepare_b,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="comId != null">
+        #{comId,jdbcType=INTEGER},
+      </if>
+      <if test="comPwd != null">
+        #{comPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="comEmail != null">
+        #{comEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobId != null">
+        #{comReleaseJobId,jdbcType=INTEGER},
+      </if>
+      <if test="comMessageId != null">
+        #{comMessageId,jdbcType=INTEGER},
+      </if>
+      <if test="comProductId != null">
+        #{comProductId,jdbcType=INTEGER},
+      </if>
+      <if test="comLabelId != null">
+        #{comLabelId,jdbcType=INTEGER},
+      </if>
+      <if test="comCreateTeamId != null">
+        #{comCreateTeamId,jdbcType=INTEGER},
+      </if>
+      <if test="comStatus != null">
+        #{comStatus,jdbcType=INTEGER},
+      </if>
+      <if test="comCreateDate != null">
+        #{comCreateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="companyPrepareA != null">
+        #{companyPrepareA,jdbcType=VARCHAR},
+      </if>
+      <if test="companyPrepareB != null">
+        #{companyPrepareB,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.internshipElves.entity.Company">
+    update company
+    <set>
+      <if test="comPwd != null">
+        com_pwd = #{comPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="comEmail != null">
+        com_email = #{comEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobId != null">
+        com_release_job_id = #{comReleaseJobId,jdbcType=INTEGER},
+      </if>
+      <if test="comMessageId != null">
+        com_message_id = #{comMessageId,jdbcType=INTEGER},
+      </if>
+      <if test="comProductId != null">
+        com_product_id = #{comProductId,jdbcType=INTEGER},
+      </if>
+      <if test="comLabelId != null">
+        com_label_id = #{comLabelId,jdbcType=INTEGER},
+      </if>
+      <if test="comCreateTeamId != null">
+        com_create_team_id = #{comCreateTeamId,jdbcType=INTEGER},
+      </if>
+      <if test="comStatus != null">
+        com_status = #{comStatus,jdbcType=INTEGER},
+      </if>
+      <if test="comCreateDate != null">
+        com_create_date = #{comCreateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="companyPrepareA != null">
+        company_prepare_a = #{companyPrepareA,jdbcType=VARCHAR},
+      </if>
+      <if test="companyPrepareB != null">
+        company_prepare_b = #{companyPrepareB,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where com_id = #{comId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.internshipElves.entity.Company">
+    update company
+    set com_pwd = #{comPwd,jdbcType=VARCHAR},
+      com_email = #{comEmail,jdbcType=VARCHAR},
+      com_release_job_id = #{comReleaseJobId,jdbcType=INTEGER},
+      com_message_id = #{comMessageId,jdbcType=INTEGER},
+      com_product_id = #{comProductId,jdbcType=INTEGER},
+      com_label_id = #{comLabelId,jdbcType=INTEGER},
+      com_create_team_id = #{comCreateTeamId,jdbcType=INTEGER},
+      com_status = #{comStatus,jdbcType=INTEGER},
+      com_create_date = #{comCreateDate,jdbcType=TIMESTAMP},
+      company_prepare_a = #{companyPrepareA,jdbcType=VARCHAR},
+      company_prepare_b = #{companyPrepareB,jdbcType=VARCHAR}
+    where com_id = #{comId,jdbcType=INTEGER}
+  </update>
+
+  <select id="isValidEmail" resultType="java.lang.String">
+    SELECT  com_email
+    FROM  company
+    WHERE  com_email=#{email}
+  </select>
+
+  <update id="updatePwd" >
+    UPDATE  company
+    SET  com_pwd=#{password}
+    WHERE  com_id=#{comId}
+  </update>
+
+  <!--注册添加 邮箱 和 密码-->
+  <insert id="saveRegistByEmailAndPwd" >
+    INSERT  INTO  company(com_email,com_pwd,com_create_date)
+    VALUES  (#{comEmail},#{comPwd},#{comCreateDate})
+  </insert>
+
+  <!--根据ID 获取邮箱密码-->
+  <select id="queryById"  resultType="com.internshipElves.entity.Company">
+    SELECT com_id com_email, com_pwd
+    FROM  company
+  </select>
+
+  <!--根据邮箱和密码登录-->
+  <select id="checkEmailAndPwd" resultType="com.internshipElves.entity.Company">
+    SELECT  com_id , com_email, com_pwd ,com_create_date
+    from company
+    WHERE  com_email=#{email} and com_pwd =#{password}
+  </select>
+</mapper>

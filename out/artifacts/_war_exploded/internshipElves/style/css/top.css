@@ -1,0 +1,166 @@
+#header {
+    min-width: 1024px;
+    height: 60px;
+    background: #fafafa;
+    border-top: 3px solid #019875;
+}
+
+* {
+    outline: none;
+}
+
+div {
+    display: block;
+}
+
+#header .wrapper {
+    width: 1024px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 90;
+}
+
+.logo {
+    border: 0;
+    float: left;
+    margin: 10px 0 0 0;
+}
+
+a {
+    color: #555;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out,color 0.1s ease-out;
+}
+
+img {
+    border: none;
+    width: 110px;
+    height: 50px;
+}
+
+#navheader {
+    float: left;
+    position: relative;
+    margin-left: 30px;
+    font-size: 0;
+}
+ul.reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+* {
+    outline: none;
+}
+
+ul, menu, dir {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+#navheader li {
+    height: 60px;
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+    margin: 0;
+    padding: 0 20px;
+}
+
+li {
+    text-align: -webkit-match-parent;
+}
+
+#navheader li a {
+    height: 57px;
+    line-height: 57px;
+    font-size: 20px;
+    color: #999;
+    float: left;
+    transition: all 0.2s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#navheader li.current {
+    z-index: 1;
+}
+
+#navheader li.current a {
+    color: #333;
+    border-bottom: 3px solid #019875;
+}
+
+#header dl {
+    float: right;
+    color: #fff;
+    background: #019875;
+    position: absolute;
+    right: 0;
+    z-index: 101;
+    cursor: pointer;
+    line-height: 30px;
+}
+
+dl, dd {
+    margin: 0;
+}
+
+dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+#header dt {
+    display: block;
+    position: relative;
+    color: #fff;
+    padding: 0 40px 0 20px;
+    background: #019875;
+    min-width: 105px;
+    overflow: hidden;
+}
+
+#header dt span {
+    margin-left:40px;
+    float: left;
+}
+
+#header dt span.red {
+    width: 9px;
+    height: 9px;
+    background: url(img/noticeDot.png) no-repeat;
+    margin: 11px 0 0 10px;
+}
+
+.dn {
+    display: none;
+}
+
+header dt i {
+    position: absolute;
+    top: 14px;
+    right: 25px;
+    border: 4px solid #fff;
+    border-color: #fff #019875 #019875;
+    display: block;
+    font-size: 0px;
+    height: 0;
+    width: 0;
+    transition: transform 0.2s ease 0s;
+}
+
+i, cite, em, var, address, dfn {
+    font-style: italic;
+}

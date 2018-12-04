@@ -1,0 +1,62 @@
+
+h1{
+    font-size: 30px;
+    color:#333 ;
+}
+#two{
+    font-size: 16px;
+    color: #888888;
+    display: block;
+
+}
+.three{
+
+    font-size: 16px;
+    color: #333;
+    line-height: 0px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    border-left: 0px solid black;
+    border-right: 1px solid black;
+    padding: 15px;
+    background-color: white;
+    position: relative;
+    right: 15px;
+}
+.four{
+    float: left;
+    font-size: 16px;
+    color: #333;
+}
+h2{
+    font-size: 20px;
+    color:#333 ;
+}
+.five{
+    display: block;
+}
+#six{
+
+    background-color: #019875;
+    font-size: 20px;
+    color: #fff;
+    width: 100px;
+    line-height: 40px;
+    text-align: center;
+}
+#eight{
+
+    background-color: #019875;
+    font-size: 20px;
+    width: 100px;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+    left: 20px;
+    color: #fff;
+}
+#seven{
+    float: left;
+    position: relative;
+    top: 40px;
+}

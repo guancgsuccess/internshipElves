@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="实习精灵:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aa4df4da-f6d1-431a-939b-7b41956a0934" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Jsp File" />
+        <option value="JavaScript File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>100</find>
+      <find>status</find>
+      <find>style</find>
+      <find>预览在线简历</find>
+      <find>js</find>
+      <find>www.baidu.com</find>
+      <find>title</find>
+      <find>我的简历</find>
+      <find>职位列表</find>
+      <find>logou</find>
+      <find>论坛</find>
+      <find>首页</find>
+      <find>退出</find>
+      <find>公司</find>
+      <find>产品</find>
+      <find>投个进阿里</find>
+      <find>prepareB</find>
+      <find>current</find>
+      <find>releaseJob</find>
+      <find>发展阶段</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/internshipElves/service/impl/ComLabelServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/service/impl/ComLoginServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/service/impl/ComMessageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/service/impl/CompanyServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/service/impl/ComProductServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/service/impl/ComReleaseJobServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/service/ComReleaseJobService.java" />
+        <option value="$PROJECT_DIR$/web/internshipElves/register.jsp" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/controller/ComLoginController.java" />
+        <option value="$PROJECT_DIR$/web/internshipElves/register2.jsp" />
+        <option value="$PROJECT_DIR$/web/internshipElves/login.jsp" />
+        <option value="$PROJECT_DIR$/web/internshipElves/comLogin.jsp" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/controller/ComCreateTeamController.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/controller/CompanyController.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/service/ComCreateTeamService.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/controller/ComReleaseJobsController.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/dao/ComMessageDAO.xml" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/dao/ComCreateTeamDAO.xml" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/controller/ComInformationController.java" />
+        <option value="$PROJECT_DIR$/web/internshipElves/positions.jsp" />
+        <option value="$PROJECT_DIR$/web/internshipElves/myResume.jsp" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/dao/StudentDAO.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/dao/StudentDAO.xml" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/dao/ResumeDAO.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/dao/ResumeDAO.xml" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/dao/ProExpDAO.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/dao/ProExpDAO.xml" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/service/ResumeService.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/service/impl/ResumeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/service/impl/ProExpServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/service/ProExpService.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/controller/InformationController.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/service/StudentService.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/service/impl/StudentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/service/DeliverResumeService.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/service/impl/DeliverResumeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/dao/DeliverResumeDAO.java" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/dao/DeliverResumeDAO.xml" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/controller/ComReleaseJobController.java" />
+        <option value="$PROJECT_DIR$/web/internshipElves/employInformation.jsp" />
+        <option value="$PROJECT_DIR$/web/internshipElves/personCenter.jsp" />
+        <option value="$PROJECT_DIR$/web/internshipElves/personInformation1.jsp" />
+        <option value="$PROJECT_DIR$/web/internshipElves/personInformation2.jsp" />
+        <option value="$PROJECT_DIR$/web/internshipElves/personInformation3.jsp" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/controller/MyResumeController.java" />
+        <option value="$PROJECT_DIR$/src/config/dbconn.properties" />
+        <option value="$PROJECT_DIR$/web/internshipElves/myhome.jsp" />
+        <option value="$PROJECT_DIR$/web/internshipElves/list.jsp" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/controller/ComMessageController.java" />
+        <option value="$PROJECT_DIR$/web/internshipElves/companyList.jsp" />
+        <option value="$PROJECT_DIR$/src/com/internshipElves/util/PageModel.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-25" />
+    <option name="y" value="135" />
+    <option name="width" value="1386" />
+    <option name="height" value="788" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="internshipElves" type="b2602c69:ProjectViewProjectNode" />
+              <item name="internshipElves" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="internshipElves" type="b2602c69:ProjectViewProjectNode" />
+              <item name="internshipElves" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="internshipElves" type="b2602c69:ProjectViewProjectNode" />
+              <item name="internshipElves" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="internshipElves" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="internshipElves" type="b2602c69:ProjectViewProjectNode" />
+              <item name="internshipElves" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="internshipElves" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="internshipElves" type="b2602c69:ProjectViewProjectNode" />
+              <item name="internshipElves" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="internshipElves" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="internshipElves" type="b2602c69:ProjectViewProjectNode" />
+              <item name="internshipElves" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="internshipElves" type="b2602c69:ProjectViewProjectNode" />
+              <item name="internshipElves" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\整合\internshipElves(1)\internshipElves\web\internshipElves" />
+      <recent name="E:\整合\internshipElves(1)\internshipElves\src\com\internshipElves\controller" />
+      <recent name="E:\整合\internshipElves(1)\internshipElves\web\internshipElves\style\css" />
+      <recent name="E:\整合\internshipElves(1)\internshipElves\web\internshipElves\style\js" />
+      <recent name="D:\study\workspace\internshipElves\web\internshipElves\style\images" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.internshipElves.controller" />
+      <recent name="com.internshipElves.service.impl" />
+      <recent name="com.internshipElves.service" />
+      <recent name="com.internshipElves.util" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\study\workspace\internshipElves\web\internshipElves\style\images" />
+      <recent name="F:\internshipElves\web\internshipElves\style\images" />
+      <recent name="E:\internshipElves\web\internshipElves" />
+      <recent name="E:\internshipElves\web" />
+      <recent name="D:\study\workspace\internshipELves\web\internshipElves" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HEIGHT" value="0" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="WIDTH" value="0" />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="Tomcat 8.5.33" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.33" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <deployment>
+        <artifact name="实习精灵:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_8_5_33_实习精灵" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51807" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="实习精灵:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aa4df4da-f6d1-431a-939b-7b41956a0934" name="Default" comment="" />
+      <created>1539391246731</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1539391246731</updated>
+      <workItem from="1539391260177" duration="4918000" />
+      <workItem from="1539397871276" duration="5705000" />
+      <workItem from="1539403689174" duration="1367000" />
+      <workItem from="1539405250067" duration="2959000" />
+      <workItem from="1539410215639" duration="9914000" />
+      <workItem from="1539507184596" duration="1406000" />
+      <workItem from="1539519065136" duration="1124000" />
+      <workItem from="1539571003595" duration="235000" />
+      <workItem from="1539571354867" duration="7745000" />
+      <workItem from="1539598808104" duration="6009000" />
+      <workItem from="1539604897384" duration="5006000" />
+      <workItem from="1539651073491" duration="666000" />
+      <workItem from="1539674002230" duration="2129000" />
+      <workItem from="1539685481641" duration="80000" />
+      <workItem from="1539737075401" duration="2537000" />
+      <workItem from="1539955282790" duration="2346000" />
+      <workItem from="1539963315016" duration="11117000" />
+      <workItem from="1539996237733" duration="27611000" />
+      <workItem from="1540039912018" duration="11351000" />
+      <workItem from="1540083129407" duration="15832000" />
+      <workItem from="1540170473093" duration="35094000" />
+      <workItem from="1540221080928" duration="1069000" />
+      <workItem from="1540255103672" duration="32336000" />
+      <workItem from="1540342045679" duration="10716000" />
+      <workItem from="1540428024305" duration="434000" />
+      <workItem from="1540428747827" duration="15710000" />
+      <workItem from="1540466397707" duration="560000" />
+      <workItem from="1540468366358" duration="684000" />
+      <workItem from="1540537894626" duration="1024000" />
+      <workItem from="1540541478044" duration="1673000" />
+      <workItem from="1540600838004" duration="773000" />
+      <workItem from="1540609167078" duration="4156000" />
+      <workItem from="1540772606070" duration="25666000" />
+      <workItem from="1540802491992" duration="3802000" />
+      <workItem from="1540859525729" duration="34092000" />
+      <workItem from="1540906709836" duration="1699000" />
+      <workItem from="1540945452415" duration="1625000" />
+      <workItem from="1540947505920" duration="21257000" />
+      <workItem from="1540981660099" duration="8535000" />
+      <workItem from="1541032875739" duration="6734000" />
+      <workItem from="1541053133250" duration="7143000" />
+      <workItem from="1541119618910" duration="417000" />
+      <workItem from="1541123725658" duration="307000" />
+      <workItem from="1541124044768" duration="23732000" />
+      <workItem from="1541224510159" duration="6050000" />
+      <workItem from="1541235714484" duration="983000" />
+      <workItem from="1541551325467" duration="1910000" />
+      <workItem from="1541658615318" duration="9529000" />
+      <workItem from="1542029326656" duration="1916000" />
+      <workItem from="1542111753712" duration="682000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="380417000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="2" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5015129" side_tool="true" weight="0.003267974" />
+      <window_info anchor="bottom" id="Application Servers" order="13" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32980332" />
+      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="7" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info id="UI Designer" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39982653" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info id="Image Layers" order="4" />
+      <window_info anchor="bottom" id="Java Enterprise" order="9" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.90686274" />
+      <window_info anchor="bottom" id="Spring" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2579425" />
+      <window_info id="Web" order="5" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="8" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32957503" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="Application Servers" order="13" />
+      <window_info id="Designer" order="7" />
+      <window_info anchor="right" id="Palette" order="2" />
+      <window_info anchor="bottom" id="Spring" order="11" />
+      <window_info id="Image Layers" order="4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.25653595" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5015129" side_tool="true" weight="0.003267974" />
+      <window_info anchor="bottom" id="Messages" order="8" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Java Enterprise" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32980332" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25416037" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Web" order="5" side_tool="true" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32957503" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39982653" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="11" />
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/dao/ComMessageDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6790">
+          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/dao/ComMessageDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1548">
+          <caret line="46" column="47" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/dao/ComCreateTeamDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/controller/CompanyIntroduceController.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/controller/CompanyHandleResumeController.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/controller/ComLoginController.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/controller/ComIntroduceController.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/controller/ComInformationController.java" />
+    <entry file="file://$PROJECT_DIR$/web/internshipElves/releaseJob.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7668" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/springmvc-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="21" column="55" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/internshipElves/positions.jsp" />
+    <entry file="file://$PROJECT_DIR$/web/internshipElves/preview.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/internshipElves/myResume.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1022">
+          <caret line="752" lean-forward="true" selection-start-line="752" selection-end-line="752" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/dao/ResumeDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="914">
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/dao/ResumeDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/dao/ProExpDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/dao/ProExpDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/service/ResumeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/service/impl/ResumeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1022">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/service/impl/ProExpServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/service/ProExpService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/service/impl/StudentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="67" column="13" lean-forward="true" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/dao/StudentDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-494">
+          <caret line="300" column="11" lean-forward="true" selection-start-line="300" selection-start-column="11" selection-end-line="300" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/dao/StudentDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="74" column="23" lean-forward="true" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/service/StudentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/service/DeliverResumeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="24" column="70" selection-start-line="24" selection-start-column="70" selection-end-line="24" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/dao/DeliverResumeDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="824">
+          <caret line="43" column="114" selection-start-line="43" selection-start-column="114" selection-end-line="43" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/service/impl/DeliverResumeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/controller/ComReleaseJobController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/dao/DeliverResumeDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/controller/StuLoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1080">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/internshipElves/employInformation.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47016">
+          <caret line="841" selection-start-line="841" selection-end-line="841" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/internshipElves/myhome1.jsp" />
+    <entry file="file://$PROJECT_DIR$/web/internshipElves/personCenter.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="860">
+          <caret line="852" column="7" selection-start-line="852" selection-start-column="7" selection-end-line="852" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/internshipElves/index01.jsp" />
+    <entry file="file://$PROJECT_DIR$/web/internshipElves/index02.jsp" />
+    <entry file="file://$PROJECT_DIR$/web/internshipElves/index03.jsp" />
+    <entry file="file://$PROJECT_DIR$/web/internshipElves/index06.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/controller/MyResumeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="946">
+          <caret line="58" column="50" selection-start-line="58" selection-start-column="50" selection-end-line="58" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/internshipElves/personInformation1.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12804">
+          <caret line="583" column="22" selection-start-line="583" selection-start-column="22" selection-end-line="583" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/controller/InformationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="107" column="23" lean-forward="true" selection-start-line="107" selection-start-column="23" selection-end-line="107" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/internshipElves/personInformation3.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="604" selection-start-line="604" selection-end-line="604" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/internshipElves/personInformation2.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="585" selection-start-line="585" selection-end-line="585" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/internshipElves/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="391" column="32" selection-start-line="391" selection-start-column="32" selection-end-line="391" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/jdk1.8/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="128" selection-start-line="128" selection-end-line="129" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/jdk1.8/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="145" column="5" lean-forward="true" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/util/PageModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/dbconn.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/internshipElves/myhome.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="101" column="14" selection-start-line="101" selection-start-column="14" selection-end-line="101" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/internshipElves/companyList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="234" column="24" lean-forward="true" selection-start-line="234" selection-start-column="24" selection-end-line="234" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/internshipElves/controller/ComMessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>实习精灵:war exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>实习精灵</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,676 @@
+body {
+    margin: 0;
+    padding: 0;
+    font: 14px/22px "微软雅黑","宋体",Arial;
+    color: #333;
+    word-wrap: break-word;
+}
+div{
+    display: block;
+}
+a{
+    color: #555;
+    text-decoration: none;
+    cursor: pointer;
+}
+html, body {
+    height: 100%;
+}
+* {
+    outline: none;
+}
+i, cite, em, var, address, dfn {
+    font-style: italic;
+}
+body {
+    display: block;
+
+}
+::selection {
+    background: #019875;
+    color: white;
+}
+
+
+
+#header {
+    min-width: 1024px;
+    height: 60px;
+    background: #fafafa;
+    border-top: 3px solid #019875;
+}
+#header .wrapper {
+    width: 1024px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 90;
+}
+.logo {
+    border: 0;
+    float: left;
+    margin: 10px 0 0 0;
+}
+#navheader {
+    float: left;
+    position: relative;
+    margin-left: 30px;
+    font-size: 0;
+}
+#navheader li {
+    height: 60px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    position: relative;
+    z-index: 3;
+    margin: 0;
+    padding: 0 20px;
+}
+#navheader li a {
+    height: 57px;
+    line-height: 57px;
+    font-size: 20px;
+    color: #999;
+    float: left;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+#header dl {
+    float: right;
+    *max-width: 170px;
+    color: #fff;
+    background: #019875;
+    position: absolute;
+    right: 0;
+    z-index: 101;
+    cursor: pointer;
+    line-height: 30px;
+}
+#header dt {
+    display: block;
+    position: relative;
+    color: #fff;
+    padding: 0 40px 0 20px;
+    background: #019875;
+    min-width: 105px;
+    overflow: hidden;
+}
+#header dt span {
+    float: left;
+}
+#header dt span.red {
+    width: 9px;
+    height: 9px;
+    background: url(img/noticeDot.png) no-repeat;
+    margin: 11px 0 0 10px;
+}
+#header dt span {
+    float: left;
+}
+.dn {
+    display: none;
+}
+#header dt i {
+    position: absolute;
+    top: 14px;
+    right: 25px;
+    border: 4px solid #fff;
+    border-color: #fff #019875 #019875;
+    display: block;
+    font-size: 0px;
+    height: 0;
+    width: 0;
+    -webkit-transition: transform 0.2s ease 0s;
+    -moz-transition: transform 0.2s ease 0s;
+    -o-transition: transform 0.2s ease 0s;
+    transition: transform 0.2s ease 0s;
+}
+#header dd a {
+    display: block;
+    color: #fff;
+    padding: 0 20px;
+    background: #019875;
+}
+#noticeTip {
+    color: #019875;
+    background: #fff;
+    position: relative;
+    float: right;
+    margin: 45px 0 0 0;
+    padding: 1px 8px;
+    border: 2px solid #c4c4c4;
+}
+#noticeTip span.bot {
+    border-width: 8px;
+    border-style: dashed dashed solid;
+    border-color: transparent transparent #c4c4c4;
+    right: 20px;
+    top: -16px;
+}
+
+#noticeTip span {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    position: absolute;
+}
+#noticeTip span.top {
+    border-width: 8px;
+    border-style: dashed dashed solid;
+    border-color: transparent transparent #ffffff;
+    right: 20px;
+    top: -14px;
+}
+
+#noticeTip span {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    position: absolute;
+}
+#noticeTip a {
+    color: #019875;
+}
+#noticeTip a.closeNT {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-left: 10px;
+    background: url(img/close_notice.png) no-repeat;
+    transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+
+
+#container {
+    width: 1024px;
+    margin: 35px auto 0;
+    padding-bottom: 100px;
+}
+.clearfix {
+    display: inline-block;
+}
+.content_l {
+    float: left;
+    width: 680px;
+}
+.c_delivery {
+    margin-bottom: 40px;
+    position: relative;
+    background-color: #fafafa;
+}
+.c_delivery > dd {
+    color: #555;
+    padding: 55px 0 20px 0;
+    clear: both;
+}
+dl, dd {
+    margin: 0;
+}
+dt {
+    display: block;
+}
+
+
+dd {
+    display: block;
+
+}
+.c_delivery h1 {
+    float: left;
+    color: #fff;
+    font-size: 24px;
+    font-weight: normal;
+    height: 43px;
+    background: #91cebe;
+    margin: -8px 0 10px 48px;
+    padding: 0 20px;
+    line-height: 43px;
+    position: absolute;
+    z-index: 2;
+}
+.content_l h1 {
+    font-weight: normal;
+    line-height: 42px;
+    margin: 0 0 20px 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+}
+h1 {
+    display: block;
+    font-size: 2em;
+
+    font-weight: bold;
+}
+.d_refresh {
+    font-size: 18px;
+    color: #555;
+    background: url(img/refresh.png) left center no-repeat;
+    padding-left: 20px;
+    position: absolute;
+    right: 50px;
+    top: 16px;
+}
+
+
+.delivery_tabs {
+    background: #e9f2ee;
+    padding-top: 10px ;
+    padding-bottom: 10px
+
+}
+.delivery_tabs ul {
+    background: #fff;
+    margin: 0 48px;
+    border-bottom: 1px solid #d8d8d8;
+    font-size: 0;
+}
+
+ul.reset {
+
+    padding: 0;
+    list-style: none;
+    margin-left: 40px;
+}
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.delivery_tabs li.current {
+    border-bottom: 4px solid #019875;
+}
+.delivery_tabs li {
+    padding: 9px 0 5px 0;
+
+    display: inline-block;
+
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.delivery_tabs li.current a, .delivery_tabs li:hover a {
+    color: #019875;
+}
+a:hover{
+    color: #019875;
+}
+
+.delivery_tabs li a {
+    display: block;
+    text-decoration: none;
+    padding: 3px 21px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #777;
+    border-right: 1px solid #d8d8d8;
+}
+.delivery_tabs li.last a {
+    width: 55px;
+    border-right: none;
+    text-decoration: none;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+ul.my_delivery {
+    margin: 20px 48px;
+}
+.my_delivery .d_item {
+    border-left: 3px solid #91cebe;
+    overflow: hidden;
+    padding: 3px 12px;
+}
+.my_delivery h2 {
+    padding: 5px 0;
+    margin: 0!important;
+    font-weight: normal;
+    float: left;
+}
+
+h2 {
+    font-size: 16px;
+
+}
+
+.my_delivery h2 em {
+    font-size: 18px;
+    color: #0d9572;
+}
+
+em {
+    font-style: normal;
+}
+
+.my_delivery h2 span {
+    color: #e6775c;
+    font-size: 16px;
+    float: none;
+}
+.clear {
+    clear: both;
+}
+
+.d_jobname {
+    *width: 400px;
+    clear: both;
+    float: left;
+    color: #555;
+    font-size: 16px;
+    margin: 5px 0;
+}
+.d_jobname span {
+    color: #999;
+}
+.d_time {
+    *width: 150px;
+    float: right;
+    color: #999999;
+    margin: 5px 0;
+    *margin: 10px -30px 0 0;
+}
+.d_resume {
+    clear: both;
+    float: left;
+    color: #999999;
+    margin: 5px 0;
+    *width: 300px;
+}
+.d_resume span {
+    color: #333;
+}
+.btn_showprogress {
+    float: right;
+    color: #019875;
+    font-size: 16px;
+    margin: 5px 0;
+    position: relative;
+    padding-right: 15px;
+}
+
+.btn_showprogress i {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    border-width: 6px 6px 0;
+    border-style: solid dashed;
+    border-color: #019875 transparent transparent;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+.progress_status {
+    border-top: 1px dashed #cccccc;
+    border-bottom: 2px solid #91cebe;
+    padding: 25px 35px;
+    position: relative;
+    zoom: 1;
+    overflow: hidden;
+
+    transition: all 0.2s ease-in-out;
+}
+
+#recordPopBox {
+    width: 490px;
+    border: 5px solid rgba(0,0,0,0.2);
+    border: 5px solid #cccccc\9;
+    background: #fff;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    margin: -250px 0 0 -250px;
+}
+
+.dn {
+    /* display: none;*/
+}
+.progress_status ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+.status_steps .status_1 {
+    margin-left: 20px;
+}
+.status_steps .status_done {
+    width: 28px;
+    height: 28px;
+    background: url(img/status_bg.png) left top no-repeat;
+}
+.status_steps .status_line {
+    width: 120px;
+    margin-top: 12px;
+}
+.status_steps li {
+    float: left;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 28px;
+    margin-bottom: 0;
+}
+.my_delivery li {
+    margin-bottom: 30px;
+    background: #fff;
+    position: relative;
+}
+.status_steps .status_line_done span {
+    display: block;
+    height: 4px;
+    background: #019875;
+}
+.progress_status ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.status_text li {
+    float: left;
+    color: #333;
+    font-size: 16px;
+    line-height: 28px;
+    margin-left: 5px ;
+    margin-bottom: 30px;
+}
+
+.my_delivery li {
+    margin-bottom: 30px;
+    background: #fff;
+    position: relative;
+}
+.status_text li.status_text_2 {
+    margin-left: 80px;
+}
+.status_text li.status_text_3 {
+    margin-left: 60px;
+}
+.status_list li {
+    margin: 0;
+}
+
+.my_delivery li {
+    margin-bottom: 30px;
+    background: #fff;
+    position: relative;
+}
+.status_list .list_time {
+    font-size: 12.5px;
+    color: #999;
+    padding-left: 20px;
+    position: relative;
+}
+.status_list .top .list_time em {
+    background-position: left top;
+}
+
+.status_list .list_time em {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 10px;
+    height: 11px;
+    background: url(img/status_dot.png) left bottom no-repeat;
+}
+.status_list .top .list_body {
+    border-left: 3px solid #019875;
+}
+
+.status_list .list_body {
+    color: #555;
+    border-left: 2px solid #d0d0d0;
+    padding: 2px 0 20px 12px;
+    margin-left: 4px;
+    font-size: 16px;
+    line-height: 28px;
+}
+.status_list .list_body div {
+    color: #888888;
+}
+.status_list .bottom .list_body {
+    border-left: none;
+}
+
+.status_list .list_body {
+    color: #555;
+    border-left: 2px solid #d0d0d0;
+    padding: 2px 0 20px 12px;
+    margin-left: 4px;
+    font-size: 16px;
+    line-height: 28px;
+}
+.btn_closeprogress {
+    position: absolute;
+    right: 35px;
+    bottom: 30px;
+    width: 44px;
+    height: 44px;
+    background: url(img/progress_close.png) no-repeat;
+}
+.content_r {
+    float: left;
+    width: 280px;
+    margin-left: 64px;
+}
+
+#resume_name, #resumeScore, #basicInfo, #expectJob, #workExperience, #projectExperience, #educationalBackground, #selfDescription, #worksShow, #myInfo, #myResume, #resumeSet {
+    position: relative;
+}
+
+.mycenterR {
+    background: #fafafa;
+    padding: 15px 20px;
+    margin-bottom: 8px;
+}
+
+.mycenterR h2 {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0 0 8px 0;
+}
+
+h2 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+.mycenterR a {
+    color: #333;
+    text-decoration: underline;
+}
+#myInfo a span.red {
+    color: #e6775c;
+}
+
+#myRecommend {
+    overflow: hidden;
+}
+
+.mycenterR {
+    background: #fafafa;
+    padding: 15px 20px;
+    margin-bottom: 8px;
+}
+.mycenterR h2 i {
+    font-size: 14px;
+    font-style: normal;
+    float: right;
+    *margin-top: -20px;
+}
+#myRecommend ul {
+    border-top: 1px solid #e5e5e5;
+}
+#myRecommend ul li {
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+}
+#myRecommend ul li a {
+    padding: 10px 0;
+    display: block;
+    text-decoration: none;
+}
+#myRecommend ul li span {
+    width: 200px;
+    display: block;
+}
+
+.f16 {
+    font-size: 16px;
+}
+#myRecommend ul li em {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font: 24px Candara;
+    color: #e46a4a;
+}
+#myRecommend .more {
+    float: right;
+    color: #019875;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.qrcode {
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.greybg {
+    background: #fafafa;
+    padding: 20px 20px 10px 20px;
+    *padding-bottom: 20px;
+}
+.mt20 {
+    margin-top: 20px;
+}
+img {
+    border: none;
+}
+.c7 {
+    color: #777;
+}

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.internshipElves.dao.ComReleaseJobDAO">
+  <resultMap id="BaseResultMap" type="com.internshipElves.entity.ComReleaseJob">
+    <id column="com_release_job_id" jdbcType="INTEGER" property="comReleaseJobId" />
+    <result column="com_id" jdbcType="INTEGER" property="comId" />
+    <result column="com_release_job_type" jdbcType="VARCHAR" property="comReleaseJobType" />
+    <result column="com_release_job_name" jdbcType="VARCHAR" property="comReleaseJobName" />
+    <result column="com_release_job_depart" jdbcType="VARCHAR" property="comReleaseJobDepart" />
+    <result column="com_release_job_prop" jdbcType="VARCHAR" property="comReleaseJobProp" />
+    <result column="com_release_job_salary_low" jdbcType="INTEGER" property="comReleaseJobSalaryLow" />
+    <result column="com_release_job_salary_high" jdbcType="INTEGER" property="comReleaseJobSalaryHigh" />
+    <result column="com_release_job_city" jdbcType="VARCHAR" property="comReleaseJobCity" />
+    <result column="com_release_job_exp" jdbcType="VARCHAR" property="comReleaseJobExp" />
+    <result column="com_release_job_requir" jdbcType="VARCHAR" property="comReleaseJobRequir" />
+    <result column="com_release_job_temp" jdbcType="VARCHAR" property="comReleaseJobTemp" />
+    <result column="com_release_job_describe" jdbcType="VARCHAR" property="comReleaseJobDescribe" />
+    <result column="com_release_job_addr" jdbcType="VARCHAR" property="comReleaseJobAddr" />
+    <result column="com_release_job_email" jdbcType="VARCHAR" property="comReleaseJobEmail" />
+    <result column="com_release_job_time" jdbcType="DATE" property="comReleaseJobTime" />
+    <result column="com_release_job_update_time" jdbcType="DATE" property="comReleaseJobUpdateTime" />
+    <result column="com_release_job_status" jdbcType="INTEGER" property="comReleaseJobStatus" />
+    <result column="com_release_job_resume_prepare_a" jdbcType="VARCHAR" property="comReleaseJobResumePrepareA" />
+    <result column="com_release_job_resume_prepare_b" jdbcType="VARCHAR" property="comReleaseJobResumePrepareB" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    com_release_job_id, com_id, com_release_job_type, com_release_job_name, com_release_job_depart, 
+    com_release_job_prop, com_release_job_salary_low, com_release_job_salary_high, com_release_job_city, 
+    com_release_job_exp, com_release_job_requir, com_release_job_temp, com_release_job_describe, 
+    com_release_job_addr, com_release_job_email, com_release_job_time, com_release_job_update_time, 
+    com_release_job_status, com_release_job_resume_prepare_a, com_release_job_resume_prepare_b
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from com_release_job
+    where com_release_job_id = #{comReleaseJobId,jdbcType=INTEGER}
+  </select>
+  <select id="queryByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from com_release_job
+    where com_release_job_id = #{comReleaseJobId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from com_release_job
+    where com_release_job_id = #{comReleaseJobId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.internshipElves.entity.ComReleaseJob">
+    insert into com_release_job (com_release_job_id, com_id, com_release_job_type, 
+      com_release_job_name, com_release_job_depart, 
+      com_release_job_prop, com_release_job_salary_low, 
+      com_release_job_salary_high, com_release_job_city, 
+      com_release_job_exp, com_release_job_requir, 
+      com_release_job_temp, com_release_job_describe, 
+      com_release_job_addr, com_release_job_email, 
+      com_release_job_time, com_release_job_update_time, com_release_job_status, 
+      com_release_job_resume_prepare_a, com_release_job_resume_prepare_b
+      )
+    values (#{comReleaseJobId,jdbcType=INTEGER}, #{comId,jdbcType=INTEGER}, #{comReleaseJobType,jdbcType=VARCHAR}, 
+      #{comReleaseJobName,jdbcType=VARCHAR}, #{comReleaseJobDepart,jdbcType=VARCHAR}, 
+      #{comReleaseJobProp,jdbcType=VARCHAR}, #{comReleaseJobSalaryLow,jdbcType=INTEGER}, 
+      #{comReleaseJobSalaryHigh,jdbcType=INTEGER}, #{comReleaseJobCity,jdbcType=VARCHAR}, 
+      #{comReleaseJobExp,jdbcType=VARCHAR}, #{comReleaseJobRequir,jdbcType=VARCHAR}, 
+      #{comReleaseJobTemp,jdbcType=VARCHAR}, #{comReleaseJobDescribe,jdbcType=VARCHAR}, 
+      #{comReleaseJobAddr,jdbcType=VARCHAR}, #{comReleaseJobEmail,jdbcType=VARCHAR}, 
+      #{comReleaseJobTime,jdbcType=DATE}, #{comReleaseJobUpdateTime,jdbcType=DATE}, #{comReleaseJobStatus,jdbcType=INTEGER}, 
+      #{comReleaseJobResumePrepareA,jdbcType=VARCHAR}, #{comReleaseJobResumePrepareB,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.internshipElves.entity.ComReleaseJob">
+    insert into com_release_job
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="comReleaseJobId != null">
+        com_release_job_id,
+      </if>
+      <if test="comId != null">
+        com_id,
+      </if>
+      <if test="comReleaseJobType != null">
+        com_release_job_type,
+      </if>
+      <if test="comReleaseJobName != null">
+        com_release_job_name,
+      </if>
+      <if test="comReleaseJobDepart != null">
+        com_release_job_depart,
+      </if>
+      <if test="comReleaseJobProp != null">
+        com_release_job_prop,
+      </if>
+      <if test="comReleaseJobSalaryLow != null">
+        com_release_job_salary_low,
+      </if>
+      <if test="comReleaseJobSalaryHigh != null">
+        com_release_job_salary_high,
+      </if>
+      <if test="comReleaseJobCity != null">
+        com_release_job_city,
+      </if>
+      <if test="comReleaseJobExp != null">
+        com_release_job_exp,
+      </if>
+      <if test="comReleaseJobRequir != null">
+        com_release_job_requir,
+      </if>
+      <if test="comReleaseJobTemp != null">
+        com_release_job_temp,
+      </if>
+      <if test="comReleaseJobDescribe != null">
+        com_release_job_describe,
+      </if>
+      <if test="comReleaseJobAddr != null">
+        com_release_job_addr,
+      </if>
+      <if test="comReleaseJobEmail != null">
+        com_release_job_email,
+      </if>
+      <if test="comReleaseJobTime != null">
+        com_release_job_time,
+      </if>
+      <if test="comReleaseJobUpdateTime != null">
+        com_release_job_update_time,
+      </if>
+      <if test="comReleaseJobStatus != null">
+        com_release_job_status,
+      </if>
+      <if test="comReleaseJobResumePrepareA != null">
+        com_release_job_resume_prepare_a,
+      </if>
+      <if test="comReleaseJobResumePrepareB != null">
+        com_release_job_resume_prepare_b,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="comReleaseJobId != null">
+        #{comReleaseJobId,jdbcType=INTEGER},
+      </if>
+      <if test="comId != null">
+        #{comId,jdbcType=INTEGER},
+      </if>
+      <if test="comReleaseJobType != null">
+        #{comReleaseJobType,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobName != null">
+        #{comReleaseJobName,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobDepart != null">
+        #{comReleaseJobDepart,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobProp != null">
+        #{comReleaseJobProp,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobSalaryLow != null">
+        #{comReleaseJobSalaryLow,jdbcType=INTEGER},
+      </if>
+      <if test="comReleaseJobSalaryHigh != null">
+        #{comReleaseJobSalaryHigh,jdbcType=INTEGER},
+      </if>
+      <if test="comReleaseJobCity != null">
+        #{comReleaseJobCity,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobExp != null">
+        #{comReleaseJobExp,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobRequir != null">
+        #{comReleaseJobRequir,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobTemp != null">
+        #{comReleaseJobTemp,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobDescribe != null">
+        #{comReleaseJobDescribe,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobAddr != null">
+        #{comReleaseJobAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobEmail != null">
+        #{comReleaseJobEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobTime != null">
+        #{comReleaseJobTime,jdbcType=DATE},
+      </if>
+      <if test="comReleaseJobUpdateTime != null">
+        #{comReleaseJobUpdateTime,jdbcType=DATE},
+      </if>
+      <if test="comReleaseJobStatus != null">
+        #{comReleaseJobStatus,jdbcType=INTEGER},
+      </if>
+      <if test="comReleaseJobResumePrepareA != null">
+        #{comReleaseJobResumePrepareA,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobResumePrepareB != null">
+        #{comReleaseJobResumePrepareB,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.internshipElves.entity.ComReleaseJob">
+    update com_release_job
+    <set>
+      <if test="comId != null">
+        com_id = #{comId,jdbcType=INTEGER},
+      </if>
+      <if test="comReleaseJobType != null">
+        com_release_job_type = #{comReleaseJobType,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobName != null">
+        com_release_job_name = #{comReleaseJobName,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobDepart != null">
+        com_release_job_depart = #{comReleaseJobDepart,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobProp != null">
+        com_release_job_prop = #{comReleaseJobProp,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobSalaryLow != null">
+        com_release_job_salary_low = #{comReleaseJobSalaryLow,jdbcType=INTEGER},
+      </if>
+      <if test="comReleaseJobSalaryHigh != null">
+        com_release_job_salary_high = #{comReleaseJobSalaryHigh,jdbcType=INTEGER},
+      </if>
+      <if test="comReleaseJobCity != null">
+        com_release_job_city = #{comReleaseJobCity,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobExp != null">
+        com_release_job_exp = #{comReleaseJobExp,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobRequir != null">
+        com_release_job_requir = #{comReleaseJobRequir,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobTemp != null">
+        com_release_job_temp = #{comReleaseJobTemp,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobDescribe != null">
+        com_release_job_describe = #{comReleaseJobDescribe,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobAddr != null">
+        com_release_job_addr = #{comReleaseJobAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobEmail != null">
+        com_release_job_email = #{comReleaseJobEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobTime != null">
+        com_release_job_time = #{comReleaseJobTime,jdbcType=DATE},
+      </if>
+      <if test="comReleaseJobUpdateTime != null">
+        com_release_job_update_time = #{comReleaseJobUpdateTime,jdbcType=DATE},
+      </if>
+      <if test="comReleaseJobStatus != null">
+        com_release_job_status = #{comReleaseJobStatus,jdbcType=INTEGER},
+      </if>
+      <if test="comReleaseJobResumePrepareA != null">
+        com_release_job_resume_prepare_a = #{comReleaseJobResumePrepareA,jdbcType=VARCHAR},
+      </if>
+      <if test="comReleaseJobResumePrepareB != null">
+        com_release_job_resume_prepare_b = #{comReleaseJobResumePrepareB,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where com_release_job_id = #{comReleaseJobId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.internshipElves.entity.ComReleaseJob">
+    update com_release_job
+    set com_id = #{comId,jdbcType=INTEGER},
+      com_release_job_type = #{comReleaseJobType,jdbcType=VARCHAR},
+      com_release_job_name = #{comReleaseJobName,jdbcType=VARCHAR},
+      com_release_job_depart = #{comReleaseJobDepart,jdbcType=VARCHAR},
+      com_release_job_prop = #{comReleaseJobProp,jdbcType=VARCHAR},
+      com_release_job_salary_low = #{comReleaseJobSalaryLow,jdbcType=INTEGER},
+      com_release_job_salary_high = #{comReleaseJobSalaryHigh,jdbcType=INTEGER},
+      com_release_job_city = #{comReleaseJobCity,jdbcType=VARCHAR},
+      com_release_job_exp = #{comReleaseJobExp,jdbcType=VARCHAR},
+      com_release_job_requir = #{comReleaseJobRequir,jdbcType=VARCHAR},
+      com_release_job_temp = #{comReleaseJobTemp,jdbcType=VARCHAR},
+      com_release_job_describe = #{comReleaseJobDescribe,jdbcType=VARCHAR},
+      com_release_job_addr = #{comReleaseJobAddr,jdbcType=VARCHAR},
+      com_release_job_email = #{comReleaseJobEmail,jdbcType=VARCHAR},
+      com_release_job_time = #{comReleaseJobTime,jdbcType=DATE},
+      com_release_job_update_time = #{comReleaseJobUpdateTime,jdbcType=DATE},
+      com_release_job_status = #{comReleaseJobStatus,jdbcType=INTEGER},
+      com_release_job_resume_prepare_a = #{comReleaseJobResumePrepareA,jdbcType=VARCHAR},
+      com_release_job_resume_prepare_b = #{comReleaseJobResumePrepareB,jdbcType=VARCHAR}
+    where com_release_job_id = #{comReleaseJobId,jdbcType=INTEGER}
+  </update>
+  
+  <select id="hotJob" resultType="com.internshipElves.entity.HotJob">
+      SELECT com_name AS comName,com_release_job_name AS comJobName,  com_release_job_city AS comCity,com_release_job_salary_low AS comSalaryLow,com_release_job_salary_high AS comSalaryHigh,
+              com_release_job_exp AS comJobExp,
+              com_release_job_requir AS comJobRequir,com_release_job_temp AS comJobTemp,com_release_job_time AS comJobTime,
+              com_field AS comField,com_founder_name AS comFounderName,com_deplo AS comDeplo,com_scale AS comScale
+      FROM com_message AS s1,com_create_team AS s2,com_release_job AS s3
+      where s1.com_id = s2.com_id and s2.com_id = s3.com_id
+      ORDER By com_release_job_salary_high DESC
+      Limit 0,6
+  </select>
+
+  <select id="newJob" resultType="com.internshipElves.entity.HotJob">
+      SELECT com_name AS comName,com_release_job_name AS comJobName,  com_release_job_city AS comCity,com_release_job_salary_low AS comSalaryLow,com_release_job_salary_high AS comSalaryHigh,
+              com_release_job_exp AS comJobExp,
+              com_release_job_requir AS comJobRequir,com_release_job_temp AS comJobTemp,com_release_job_time AS comJobTime,
+              com_field AS comField,com_founder_name AS comFounderName,com_deplo AS comDeplo,com_scale AS comScale
+      FROM com_message AS s1,com_create_team AS s2,com_release_job AS s3
+      where s1.com_id = s2.com_id and s2.com_id = s3.com_id
+      ORDER By com_release_job_time DESC
+      limit 0,6
+  </select>
+
+
+  <!--查询企业发布简历的所有信息-->
+  <select id="queryAll" resultMap="BaseResultMap">
+    select com_release_job_id,com_id,com_release_job_type,com_release_job_name,com_release_job_depart,
+    com_release_job_prop,com_release_job_salary_low,com_release_job_salary_high,com_release_job_city
+    com_release_job_exp,com_release_job_requir,com_release_job_temp,
+    com_release_job_describe,com_release_job_addr,com_release_job_email,
+    com_release_job_update_time,com_release_job_time
+    from com_release_job
+  </select>
+
+  <!-- 根据职位名称查询 -->
+  <select id="queryByJobName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from com_release_job
+    where com_release_job_name = #{comReleaseJobName}
+  </select>
+
+  <select id="queryByKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    com_release_job_id, com_id,com_release_job_name,com_release_job_prop,com_release_job_salary_low,com_release_job_salary_high,com_release_job_city,com_release_job_time, com_release_job_exp,com_release_job_requir
+    from com_release_job
+    where com_id = #{comId,jdbcType=INTEGER}  AND  com_release_job_status=#{comReleaseJobStatus}
+  </select>
+
+
+  <!-- 根据id修改 -->
+  <update id="updateById">
+    update com_release_job
+    set
+    com_release_job_status = #{comReleaseJobStatus}
+
+    where com_release_job_id = #{comReleaseJobId,jdbcType=INTEGER}
+
+  </update>
+</mapper>

@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.internshipElves.dao.StudentDAO">
+  <resultMap id="BaseResultMap" type="com.internshipElves.entity.Student">
+    <id column="stu_id" jdbcType="INTEGER" property="stuId" />
+    <result column="stu_name" jdbcType="VARCHAR" property="stuName" />
+    <result column="stu_pwd" jdbcType="VARCHAR" property="stuPwd" />
+    <result column="stu_tel" jdbcType="VARCHAR" property="stuTel" />
+    <result column="stu_email" jdbcType="VARCHAR" property="stuEmail" />
+    <result column="stu_gender" jdbcType="INTEGER" property="stuGender" />
+    <result column="stu_birth" jdbcType="DATE" property="stuBirth" />
+    <result column="stu_hometown_province" jdbcType="VARCHAR" property="stuHometownProvince" />
+    <result column="stu_hometown_city" jdbcType="VARCHAR" property="stuHometownCity" />
+    <result column="stu_addr_province" jdbcType="VARCHAR" property="stuAddrProvince" />
+    <result column="stu_addr_city" jdbcType="VARCHAR" property="stuAddrCity" />
+    <result column="stu_addr_county" jdbcType="VARCHAR" property="stuAddrCounty" />
+    <result column="stu_school" jdbcType="VARCHAR" property="stuSchool" />
+    <result column="stu_read_date" jdbcType="DATE" property="stuReadDate" />
+    <result column="stu_major" jdbcType="VARCHAR" property="stuMajor" />
+    <result column="stu_degree" jdbcType="VARCHAR" property="stuDegree" />
+    <result column="stu_create_time" jdbcType="TIMESTAMP" property="stuCreateTime" />
+    <result column="stu_update_time" jdbcType="TIMESTAMP" property="stuUpdateTime" />
+    <result column="stu_profile" jdbcType="VARCHAR" property="stuProfile" />
+    <result column="stu_photo" jdbcType="VARCHAR" property="stuPhoto" />
+    <result column="stu_grad" jdbcType="DATE" property="stuGrad" />
+    <result column="stu_gen" jdbcType="INTEGER" property="stuGen" />
+    <result column="stu_status" jdbcType="INTEGER" property="stuStatus" />
+    <result column="stu_prepare_a" jdbcType="VARCHAR" property="stuPrepareA" />
+    <result column="stu_prepare_b" jdbcType="VARCHAR" property="stuPrepareB" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    stu_id, stu_name, stu_pwd, stu_tel, stu_email, stu_gender, stu_birth, stu_hometown_province, 
+    stu_hometown_city, stu_addr_province, stu_addr_city, stu_addr_county, stu_school, 
+    stu_read_date, stu_major, stu_degree, stu_create_time, stu_update_time, stu_profile, 
+    stu_photo, stu_grad, stu_gen, stu_status, stu_prepare_a, stu_prepare_b
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from student
+    where stu_id = #{stuId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from student
+    where stu_id = #{stuId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.internshipElves.entity.Student">
+    insert into student (stu_id, stu_name, stu_pwd, 
+      stu_tel, stu_email, stu_gender, 
+      stu_birth, stu_hometown_province, stu_hometown_city, 
+      stu_addr_province, stu_addr_city, stu_addr_county, 
+      stu_school, stu_read_date, stu_major, 
+      stu_degree, stu_create_time, stu_update_time, 
+      stu_profile, stu_photo, stu_grad, 
+      stu_gen, stu_status, stu_prepare_a, 
+      stu_prepare_b)
+    values (#{stuId,jdbcType=INTEGER}, #{stuName,jdbcType=VARCHAR}, #{stuPwd,jdbcType=VARCHAR}, 
+      #{stuTel,jdbcType=VARCHAR}, #{stuEmail,jdbcType=VARCHAR}, #{stuGender,jdbcType=INTEGER}, 
+      #{stuBirth,jdbcType=DATE}, #{stuHometownProvince,jdbcType=VARCHAR}, #{stuHometownCity,jdbcType=VARCHAR}, 
+      #{stuAddrProvince,jdbcType=VARCHAR}, #{stuAddrCity,jdbcType=VARCHAR}, #{stuAddrCounty,jdbcType=VARCHAR}, 
+      #{stuSchool,jdbcType=VARCHAR}, #{stuReadDate,jdbcType=DATE}, #{stuMajor,jdbcType=VARCHAR}, 
+      #{stuDegree,jdbcType=VARCHAR}, #{stuCreateTime,jdbcType=TIMESTAMP}, #{stuUpdateTime,jdbcType=TIMESTAMP}, 
+      #{stuProfile,jdbcType=VARCHAR}, #{stuPhoto,jdbcType=VARCHAR}, #{stuGrad,jdbcType=DATE}, 
+      #{stuGen,jdbcType=INTEGER}, #{stuStatus,jdbcType=INTEGER}, #{stuPrepareA,jdbcType=VARCHAR}, 
+      #{stuPrepareB,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.internshipElves.entity.Student">
+    insert into student
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="stuId != null">
+        stu_id,
+      </if>
+      <if test="stuName != null">
+        stu_name,
+      </if>
+      <if test="stuPwd != null">
+        stu_pwd,
+      </if>
+      <if test="stuTel != null">
+        stu_tel,
+      </if>
+      <if test="stuEmail != null">
+        stu_email,
+      </if>
+      <if test="stuGender != null">
+        stu_gender,
+      </if>
+      <if test="stuBirth != null">
+        stu_birth,
+      </if>
+      <if test="stuHometownProvince != null">
+        stu_hometown_province,
+      </if>
+      <if test="stuHometownCity != null">
+        stu_hometown_city,
+      </if>
+      <if test="stuAddrProvince != null">
+        stu_addr_province,
+      </if>
+      <if test="stuAddrCity != null">
+        stu_addr_city,
+      </if>
+      <if test="stuAddrCounty != null">
+        stu_addr_county,
+      </if>
+      <if test="stuSchool != null">
+        stu_school,
+      </if>
+      <if test="stuReadDate != null">
+        stu_read_date,
+      </if>
+      <if test="stuMajor != null">
+        stu_major,
+      </if>
+      <if test="stuDegree != null">
+        stu_degree,
+      </if>
+      <if test="stuCreateTime != null">
+        stu_create_time,
+      </if>
+      <if test="stuUpdateTime != null">
+        stu_update_time,
+      </if>
+      <if test="stuProfile != null">
+        stu_profile,
+      </if>
+      <if test="stuPhoto != null">
+        stu_photo,
+      </if>
+      <if test="stuGrad != null">
+        stu_grad,
+      </if>
+      <if test="stuGen != null">
+        stu_gen,
+      </if>
+      <if test="stuStatus != null">
+        stu_status,
+      </if>
+      <if test="stuPrepareA != null">
+        stu_prepare_a,
+      </if>
+      <if test="stuPrepareB != null">
+        stu_prepare_b,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="stuId != null">
+        #{stuId,jdbcType=INTEGER},
+      </if>
+      <if test="stuName != null">
+        #{stuName,jdbcType=VARCHAR},
+      </if>
+      <if test="stuPwd != null">
+        #{stuPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="stuTel != null">
+        #{stuTel,jdbcType=VARCHAR},
+      </if>
+      <if test="stuEmail != null">
+        #{stuEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="stuGender != null">
+        #{stuGender,jdbcType=INTEGER},
+      </if>
+      <if test="stuBirth != null">
+        #{stuBirth,jdbcType=DATE},
+      </if>
+      <if test="stuHometownProvince != null">
+        #{stuHometownProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="stuHometownCity != null">
+        #{stuHometownCity,jdbcType=VARCHAR},
+      </if>
+      <if test="stuAddrProvince != null">
+        #{stuAddrProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="stuAddrCity != null">
+        #{stuAddrCity,jdbcType=VARCHAR},
+      </if>
+      <if test="stuAddrCounty != null">
+        #{stuAddrCounty,jdbcType=VARCHAR},
+      </if>
+      <if test="stuSchool != null">
+        #{stuSchool,jdbcType=VARCHAR},
+      </if>
+      <if test="stuReadDate != null">
+        #{stuReadDate,jdbcType=DATE},
+      </if>
+      <if test="stuMajor != null">
+        #{stuMajor,jdbcType=VARCHAR},
+      </if>
+      <if test="stuDegree != null">
+        #{stuDegree,jdbcType=VARCHAR},
+      </if>
+      <if test="stuCreateTime != null">
+        #{stuCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="stuUpdateTime != null">
+        #{stuUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="stuProfile != null">
+        #{stuProfile,jdbcType=VARCHAR},
+      </if>
+      <if test="stuPhoto != null">
+        #{stuPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="stuGrad != null">
+        #{stuGrad,jdbcType=DATE},
+      </if>
+      <if test="stuGen != null">
+        #{stuGen,jdbcType=INTEGER},
+      </if>
+      <if test="stuStatus != null">
+        #{stuStatus,jdbcType=INTEGER},
+      </if>
+      <if test="stuPrepareA != null">
+        #{stuPrepareA,jdbcType=VARCHAR},
+      </if>
+      <if test="stuPrepareB != null">
+        #{stuPrepareB,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.internshipElves.entity.Student">
+    update student
+    <set>
+      <if test="stuName != null">
+        stu_name = #{stuName,jdbcType=VARCHAR},
+      </if>
+      <if test="stuPwd != null">
+        stu_pwd = #{stuPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="stuTel != null">
+        stu_tel = #{stuTel,jdbcType=VARCHAR},
+      </if>
+      <if test="stuEmail != null">
+        stu_email = #{stuEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="stuGender != null">
+        stu_gender = #{stuGender,jdbcType=INTEGER},
+      </if>
+      <if test="stuBirth != null">
+        stu_birth = #{stuBirth,jdbcType=DATE},
+      </if>
+      <if test="stuHometownProvince != null">
+        stu_hometown_province = #{stuHometownProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="stuHometownCity != null">
+        stu_hometown_city = #{stuHometownCity,jdbcType=VARCHAR},
+      </if>
+      <if test="stuAddrProvince != null">
+        stu_addr_province = #{stuAddrProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="stuAddrCity != null">
+        stu_addr_city = #{stuAddrCity,jdbcType=VARCHAR},
+      </if>
+      <if test="stuAddrCounty != null">
+        stu_addr_county = #{stuAddrCounty,jdbcType=VARCHAR},
+      </if>
+      <if test="stuSchool != null">
+        stu_school = #{stuSchool,jdbcType=VARCHAR},
+      </if>
+      <if test="stuReadDate != null">
+        stu_read_date = #{stuReadDate,jdbcType=DATE},
+      </if>
+      <if test="stuMajor != null">
+        stu_major = #{stuMajor,jdbcType=VARCHAR},
+      </if>
+      <if test="stuDegree != null">
+        stu_degree = #{stuDegree,jdbcType=VARCHAR},
+      </if>
+      <if test="stuCreateTime != null">
+        stu_create_time = #{stuCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="stuUpdateTime != null">
+        stu_update_time = #{stuUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="stuProfile != null">
+        stu_profile = #{stuProfile,jdbcType=VARCHAR},
+      </if>
+      <if test="stuPhoto != null">
+        stu_photo = #{stuPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="stuGrad != null">
+        stu_grad = #{stuGrad,jdbcType=DATE},
+      </if>
+      <if test="stuGen != null">
+        stu_gen = #{stuGen,jdbcType=INTEGER},
+      </if>
+      <if test="stuStatus != null">
+        stu_status = #{stuStatus,jdbcType=INTEGER},
+      </if>
+      <if test="stuPrepareA != null">
+        stu_prepare_a = #{stuPrepareA,jdbcType=VARCHAR},
+      </if>
+      <if test="stuPrepareB != null">
+        stu_prepare_b = #{stuPrepareB,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where stu_id = #{stuId,jdbcType=INTEGER}
+  </update>
+  <update id="update" parameterType="com.internshipElves.entity.Student">
+    update student
+    set stu_name = #{stuName,jdbcType=VARCHAR},
+      stu_pwd = #{stuPwd,jdbcType=VARCHAR},
+      stu_tel = #{stuTel,jdbcType=VARCHAR},
+      stu_email = #{stuEmail,jdbcType=VARCHAR},
+      stu_gender = #{stuGender,jdbcType=INTEGER},
+      stu_birth = #{stuBirth,jdbcType=DATE},
+      stu_hometown_province = #{stuHometownProvince,jdbcType=VARCHAR},
+      stu_hometown_city = #{stuHometownCity,jdbcType=VARCHAR},
+      stu_addr_province = #{stuAddrProvince,jdbcType=VARCHAR},
+      stu_addr_city = #{stuAddrCity,jdbcType=VARCHAR},
+      stu_addr_county = #{stuAddrCounty,jdbcType=VARCHAR},
+      stu_school = #{stuSchool,jdbcType=VARCHAR},
+      stu_read_date = #{stuReadDate,jdbcType=DATE},
+      stu_major = #{stuMajor,jdbcType=VARCHAR},
+      stu_degree = #{stuDegree,jdbcType=VARCHAR},
+      stu_create_time = #{stuCreateTime,jdbcType=TIMESTAMP},
+      stu_update_time = #{stuUpdateTime,jdbcType=TIMESTAMP},
+      stu_profile = #{stuProfile,jdbcType=VARCHAR},
+      stu_photo = #{stuPhoto,jdbcType=VARCHAR},
+      stu_grad = #{stuGrad,jdbcType=DATE},
+      stu_gen = #{stuGen,jdbcType=INTEGER},
+      stu_status = #{stuStatus,jdbcType=INTEGER},
+      stu_prepare_a = #{stuPrepareA,jdbcType=VARCHAR},
+      stu_prepare_b = #{stuPrepareB,jdbcType=VARCHAR}
+    where stu_id = #{stuId,jdbcType=INTEGER}
+  </update>
+
+
+
+  <!-- 根据学生id修改-->
+
+  <update id="updateByStuId" parameterType="com.internshipElves.entity.Student">
+    update student
+    set stu_name = #{student.stuName,jdbcType=VARCHAR},
+    stu_tel = #{student.stuTel,jdbcType=VARCHAR},
+    stu_email = #{student.stuEmail,jdbcType=VARCHAR},
+    stu_gender = #{student.stuGender,jdbcType=INTEGER},
+    stu_degree = #{student.stuDegree,jdbcType=VARCHAR},
+    stu_update_time = #{student.stuUpdateTime,jdbcType=TIMESTAMP},
+    stu_prepare_a = #{student.stuPrepareA,jdbcType=VARCHAR}
+    where stu_id = #{stuId,jdbcType=INTEGER}
+  </update>
+
+
+  <!-- 根据学生id修改教育经历-->
+  <update id="updateEducationByStuId" parameterType="com.internshipElves.entity.Student">
+    update student
+    set
+    stu_school=#{student.stuSchool},
+    stu_major=#{student.stuMajor},
+    stu_degree = #{student.stuDegree,jdbcType=VARCHAR},
+    stu_update_time = #{student.stuUpdateTime,jdbcType=TIMESTAMP}
+
+    where stu_id = #{stuId,jdbcType=INTEGER}
+  </update>
+
+
+
+  <select id="isValidTelno" resultType="String">
+    SELECT stu_tel
+    from student
+    where stu_tel=#{stuTel}
+  </select>
+
+
+<!--  根据学生id查询 -->
+  <select id="queryByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from student
+    where stu_id = #{stuId,jdbcType=INTEGER}
+  </select>
+
+
+
+  <select id="isValidEmail" resultType="String">
+    SELECT stu_email
+    from student
+    where stu_email=#{email}
+  </select>
+
+  <update id="updatePwd">
+    UPDATE student
+    set stu_pwd = #{stuPwd}
+    where stu_id = #{stuId}
+  </update>
+
+  <update id="regPassword">
+     UPDATE student
+     set stu_pwd = #{regPwd}
+     where stu_tel = #{stuTel}
+  </update>
+
+  <insert id="saveRegistByEmailAndPwd">
+    INSERT into student(stu_pwd,stu_email,stu_create_time)
+    VALUES (#{stuPwd},#{stuEmail},#{stuCreateTime})
+  </insert>
+
+  <insert id="saveRegistByTelAndPwd">
+    INSERT INTO student(stu_pwd,stu_tel,stu_create_time)
+    VALUES (#{stuPwd},#{stuTel},#{stuCreateTime})
+  </insert>
+
+  <select id="queryById" resultType="com.internshipElves.entity.Student">
+    SELECT <include refid="Base_Column_List"/>
+    from student
+    where stu_id = #{stuId}
+  </select>
+
+</mapper>

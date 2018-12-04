@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+			http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+    <!--扫描组建包-->
+	<context:annotation-config></context:annotation-config>
+    <context:component-scan base-package="com.internshipElves"/>
+    <!--自动切换代理机制 -->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+    <!--引入dbconn.properiies数据源对象-->
+    <context:property-placeholder location="classpath:config/dbconn.properties"/>
+
+    <!--导入数据库配置文件-->
+    <!--需要datasource对象 dataSource是一个接口 所以需要子类 就注入一个DriverManagerDataSource
+    而且该子类又依赖于四个属性，如下-->
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${mysql.driver}"/>
+        <property name="url" value="${mysql.url}"/>
+        <property name="username" value="${mysql.user}"/>
+        <property name="password" value="${mysql.password}"/>
+    </bean>
+
+    <!--mybatis中需要的sqlsessionTemplate模板类-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:config/mybatis-config.xml"/>
+        <property name="mapperLocations" value="classpath:com/internshipElves/dao/*DAO.xml"/>
+    </bean>
+
+
+    <!-- 第二种方式：基于DAO接口扫描，实际内部还是依赖于SqlSessionTemplate-->
+    <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+    <property name="basePackage" value="com.internshipElves.dao"/>
+    <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
+
+
+</beans>

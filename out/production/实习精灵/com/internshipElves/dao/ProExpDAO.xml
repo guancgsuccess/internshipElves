@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.internshipElves.dao.ProExpDAO">
+  <resultMap id="BaseResultMap" type="com.internshipElves.entity.ProExp">
+    <id column="pro_exp_id" jdbcType="INTEGER" property="proExpId" />
+    <result column="pro_exp_name" jdbcType="VARCHAR" property="proExpName" />
+    <result column="pro_exp_desc" jdbcType="VARCHAR" property="proExpDesc" />
+    <result column="pro_exp_duty" jdbcType="VARCHAR" property="proExpDuty" />
+    <result column="resume_id" jdbcType="INTEGER" property="resumeId" />
+    <result column="pro_exp_a" jdbcType="VARCHAR" property="proExpA" />
+    <result column="pro_exp_b" jdbcType="VARCHAR" property="proExpB" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    pro_exp_id, pro_exp_name, pro_exp_desc, pro_exp_duty, resume_id, pro_exp_a, pro_exp_b
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from pro_exp
+    where pro_exp_id = #{proExpId,jdbcType=INTEGER}
+  </select>
+
+
+  <!-- 根据简历id查询项目经验 -->
+  <select id="queryProExpByResumeId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from pro_exp
+    where resume_id = #{resumeId,jdbcType=INTEGER}
+  </select>
+
+  <!-- 根据简历id修改 -->
+  <update id="updateByResumeId" parameterType="com.internshipElves.entity.ProExp">
+    update pro_exp
+    set pro_exp_name = #{proExp.proExpName,jdbcType=VARCHAR},
+    pro_exp_desc = #{proExp.proExpDesc,jdbcType=VARCHAR},
+    pro_exp_duty = #{proExp.proExpDuty,jdbcType=VARCHAR}
+    where resume_id = #{resumeId,jdbcType=INTEGER}
+  </update>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from pro_exp
+    where pro_exp_id = #{proExpId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.internshipElves.entity.ProExp">
+    insert into pro_exp (pro_exp_id, pro_exp_name, pro_exp_desc, 
+      pro_exp_duty, resume_id, pro_exp_a, 
+      pro_exp_b)
+    values (#{proExpId,jdbcType=INTEGER}, #{proExpName,jdbcType=VARCHAR}, #{proExpDesc,jdbcType=VARCHAR}, 
+      #{proExpDuty,jdbcType=VARCHAR}, #{resumeId,jdbcType=INTEGER}, #{proExpA,jdbcType=VARCHAR}, 
+      #{proExpB,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.internshipElves.entity.ProExp">
+    insert into pro_exp
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="proExpId != null">
+        pro_exp_id,
+      </if>
+      <if test="proExpName != null">
+        pro_exp_name,
+      </if>
+      <if test="proExpDesc != null">
+        pro_exp_desc,
+      </if>
+      <if test="proExpDuty != null">
+        pro_exp_duty,
+      </if>
+      <if test="resumeId != null">
+        resume_id,
+      </if>
+      <if test="proExpA != null">
+        pro_exp_a,
+      </if>
+      <if test="proExpB != null">
+        pro_exp_b,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="proExpId != null">
+        #{proExpId,jdbcType=INTEGER},
+      </if>
+      <if test="proExpName != null">
+        #{proExpName,jdbcType=VARCHAR},
+      </if>
+      <if test="proExpDesc != null">
+        #{proExpDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="proExpDuty != null">
+        #{proExpDuty,jdbcType=VARCHAR},
+      </if>
+      <if test="resumeId != null">
+        #{resumeId,jdbcType=INTEGER},
+      </if>
+      <if test="proExpA != null">
+        #{proExpA,jdbcType=VARCHAR},
+      </if>
+      <if test="proExpB != null">
+        #{proExpB,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.internshipElves.entity.ProExp">
+    update pro_exp
+    <set>
+      <if test="proExpName != null">
+        pro_exp_name = #{proExpName,jdbcType=VARCHAR},
+      </if>
+      <if test="proExpDesc != null">
+        pro_exp_desc = #{proExpDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="proExpDuty != null">
+        pro_exp_duty = #{proExpDuty,jdbcType=VARCHAR},
+      </if>
+      <if test="resumeId != null">
+        resume_id = #{resumeId,jdbcType=INTEGER},
+      </if>
+      <if test="proExpA != null">
+        pro_exp_a = #{proExpA,jdbcType=VARCHAR},
+      </if>
+      <if test="proExpB != null">
+        pro_exp_b = #{proExpB,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where pro_exp_id = #{proExpId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.internshipElves.entity.ProExp">
+    update pro_exp
+    set pro_exp_name = #{proExpName,jdbcType=VARCHAR},
+      pro_exp_desc = #{proExpDesc,jdbcType=VARCHAR},
+      pro_exp_duty = #{proExpDuty,jdbcType=VARCHAR},
+      resume_id = #{resumeId,jdbcType=INTEGER},
+      pro_exp_a = #{proExpA,jdbcType=VARCHAR},
+      pro_exp_b = #{proExpB,jdbcType=VARCHAR}
+    where pro_exp_id = #{proExpId,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.internshipElves.dao.ResumeDAO">
+  <resultMap id="BaseResultMap" type="com.internshipElves.entity.Resume">
+    <id column="resume_id" jdbcType="INTEGER" property="resumeId" />
+    <result column="resume_stu_job_nature" jdbcType="VARCHAR" property="resumeStuJobNature" />
+    <result column="resume_stu_work_addr" jdbcType="VARCHAR" property="resumeStuWorkAddr" />
+    <result column="resume_stu_industry" jdbcType="VARCHAR" property="resumeStuIndustry" />
+    <result column="resume_stu_occupation" jdbcType="VARCHAR" property="resumeStuOccupation" />
+    <result column="resume_prepare_a" jdbcType="VARCHAR" property="resumePrepareA" />
+    <result column="resume_prepare_b" jdbcType="VARCHAR" property="resumePrepareB" />
+    <result column="stu_id" jdbcType="INTEGER" property="stuId" />
+    <result column="resume_stu_salary_low" jdbcType="INTEGER" property="resumeStuSalaryLow" />
+    <result column="resume_stu_salary_high" jdbcType="INTEGER" property="resumeStuSalaryHigh" />
+    <result column="resume_stu_job_status" jdbcType="INTEGER" property="resumeStuJobStatus" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    resume_id, resume_stu_job_nature, resume_stu_work_addr, resume_stu_industry, resume_stu_occupation, 
+    resume_prepare_a, resume_prepare_b, stu_id, resume_stu_salary_low, resume_stu_salary_high, 
+    resume_stu_job_status
+  </sql>
+
+
+
+  <!-- 根据学生id查询简历 -->
+  <select id="queryResumeByStuId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from resume
+    where stu_id = #{stuId,jdbcType=INTEGER}
+  </select>
+
+
+<!-- 根据学生id修改 -->
+  <update id="updateByStuId" parameterType="com.internshipElves.entity.Resume">
+    update resume
+    set resume_stu_job_nature = #{resume.resumeStuJobNature,jdbcType=VARCHAR},
+    resume_stu_work_addr = #{resume.resumeStuWorkAddr,jdbcType=VARCHAR},
+
+    resume_stu_occupation = #{resume.resumeStuOccupation,jdbcType=VARCHAR},
+
+
+    resume_stu_salary_low = #{resume.resumeStuSalaryLow,jdbcType=INTEGER},
+    resume_stu_salary_high = #{resume.resumeStuSalaryHigh,jdbcType=INTEGER}
+    where stu_id = #{stuId,jdbcType=INTEGER}
+  </update>
+
+
+
+
+  <!-- 根据学生id修改自我描述 -->
+  <update id="updateAByStuId" parameterType="com.internshipElves.entity.Resume">
+    update resume
+    set
+    resume_prepare_a = #{resume.resumePrepareA,jdbcType=INTEGER}
+    where stu_id = #{stuId,jdbcType=INTEGER}
+  </update>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from resume
+    where resume_id = #{resumeId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from resume
+    where resume_id = #{resumeId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.internshipElves.entity.Resume">
+    insert into resume (resume_id, resume_stu_job_nature, resume_stu_work_addr, 
+      resume_stu_industry, resume_stu_occupation, 
+      resume_prepare_a, resume_prepare_b, stu_id, 
+      resume_stu_salary_low, resume_stu_salary_high, 
+      resume_stu_job_status)
+    values (#{resumeId,jdbcType=INTEGER}, #{resumeStuJobNature,jdbcType=VARCHAR}, #{resumeStuWorkAddr,jdbcType=VARCHAR}, 
+      #{resumeStuIndustry,jdbcType=VARCHAR}, #{resumeStuOccupation,jdbcType=VARCHAR}, 
+      #{resumePrepareA,jdbcType=VARCHAR}, #{resumePrepareB,jdbcType=VARCHAR}, #{stuId,jdbcType=INTEGER}, 
+      #{resumeStuSalaryLow,jdbcType=INTEGER}, #{resumeStuSalaryHigh,jdbcType=INTEGER}, 
+      #{resumeStuJobStatus,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.internshipElves.entity.Resume">
+    insert into resume
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="resumeId != null">
+        resume_id,
+      </if>
+      <if test="resumeStuJobNature != null">
+        resume_stu_job_nature,
+      </if>
+      <if test="resumeStuWorkAddr != null">
+        resume_stu_work_addr,
+      </if>
+      <if test="resumeStuIndustry != null">
+        resume_stu_industry,
+      </if>
+      <if test="resumeStuOccupation != null">
+        resume_stu_occupation,
+      </if>
+      <if test="resumePrepareA != null">
+        resume_prepare_a,
+      </if>
+      <if test="resumePrepareB != null">
+        resume_prepare_b,
+      </if>
+      <if test="stuId != null">
+        stu_id,
+      </if>
+      <if test="resumeStuSalaryLow != null">
+        resume_stu_salary_low,
+      </if>
+      <if test="resumeStuSalaryHigh != null">
+        resume_stu_salary_high,
+      </if>
+      <if test="resumeStuJobStatus != null">
+        resume_stu_job_status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="resumeId != null">
+        #{resumeId,jdbcType=INTEGER},
+      </if>
+      <if test="resumeStuJobNature != null">
+        #{resumeStuJobNature,jdbcType=VARCHAR},
+      </if>
+      <if test="resumeStuWorkAddr != null">
+        #{resumeStuWorkAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="resumeStuIndustry != null">
+        #{resumeStuIndustry,jdbcType=VARCHAR},
+      </if>
+      <if test="resumeStuOccupation != null">
+        #{resumeStuOccupation,jdbcType=VARCHAR},
+      </if>
+      <if test="resumePrepareA != null">
+        #{resumePrepareA,jdbcType=VARCHAR},
+      </if>
+      <if test="resumePrepareB != null">
+        #{resumePrepareB,jdbcType=VARCHAR},
+      </if>
+      <if test="stuId != null">
+        #{stuId,jdbcType=INTEGER},
+      </if>
+      <if test="resumeStuSalaryLow != null">
+        #{resumeStuSalaryLow,jdbcType=INTEGER},
+      </if>
+      <if test="resumeStuSalaryHigh != null">
+        #{resumeStuSalaryHigh,jdbcType=INTEGER},
+      </if>
+      <if test="resumeStuJobStatus != null">
+        #{resumeStuJobStatus,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.internshipElves.entity.Resume">
+    update resume
+    <set>
+      <if test="resumeStuJobNature != null">
+        resume_stu_job_nature = #{resumeStuJobNature,jdbcType=VARCHAR},
+      </if>
+      <if test="resumeStuWorkAddr != null">
+        resume_stu_work_addr = #{resumeStuWorkAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="resumeStuIndustry != null">
+        resume_stu_industry = #{resumeStuIndustry,jdbcType=VARCHAR},
+      </if>
+      <if test="resumeStuOccupation != null">
+        resume_stu_occupation = #{resumeStuOccupation,jdbcType=VARCHAR},
+      </if>
+      <if test="resumePrepareA != null">
+        resume_prepare_a = #{resumePrepareA,jdbcType=VARCHAR},
+      </if>
+      <if test="resumePrepareB != null">
+        resume_prepare_b = #{resumePrepareB,jdbcType=VARCHAR},
+      </if>
+      <if test="stuId != null">
+        stu_id = #{stuId,jdbcType=INTEGER},
+      </if>
+      <if test="resumeStuSalaryLow != null">
+        resume_stu_salary_low = #{resumeStuSalaryLow,jdbcType=INTEGER},
+      </if>
+      <if test="resumeStuSalaryHigh != null">
+        resume_stu_salary_high = #{resumeStuSalaryHigh,jdbcType=INTEGER},
+      </if>
+      <if test="resumeStuJobStatus != null">
+        resume_stu_job_status = #{resumeStuJobStatus,jdbcType=INTEGER},
+      </if>
+    </set>
+    where resume_id = #{resumeId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.internshipElves.entity.Resume">
+    update resume
+    set resume_stu_job_nature = #{resumeStuJobNature,jdbcType=VARCHAR},
+      resume_stu_work_addr = #{resumeStuWorkAddr,jdbcType=VARCHAR},
+      resume_stu_industry = #{resumeStuIndustry,jdbcType=VARCHAR},
+      resume_stu_occupation = #{resumeStuOccupation,jdbcType=VARCHAR},
+      resume_prepare_a = #{resumePrepareA,jdbcType=VARCHAR},
+      resume_prepare_b = #{resumePrepareB,jdbcType=VARCHAR},
+      stu_id = #{stuId,jdbcType=INTEGER},
+      resume_stu_salary_low = #{resumeStuSalaryLow,jdbcType=INTEGER},
+      resume_stu_salary_high = #{resumeStuSalaryHigh,jdbcType=INTEGER},
+      resume_stu_job_status = #{resumeStuJobStatus,jdbcType=INTEGER}
+    where resume_id = #{resumeId,jdbcType=INTEGER}
+  </update>
+</mapper>

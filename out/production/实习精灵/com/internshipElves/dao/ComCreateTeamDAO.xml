@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.internshipElves.dao.ComCreateTeamDAO">
+  <resultMap id="BaseResultMap" type="com.internshipElves.entity.ComCreateTeam">
+    <id column="com_create_team_id" jdbcType="INTEGER" property="comCreateTeamId" />
+    <result column="com_id" jdbcType="INTEGER" property="comId" />
+    <result column="com_founder_name" jdbcType="VARCHAR" property="comFounderName" />
+    <result column="com_position" jdbcType="VARCHAR" property="comPosition" />
+    <result column="com_weibo" jdbcType="VARCHAR" property="comWeibo" />
+    <result column="com_founder_intro" jdbcType="VARCHAR" property="comFounderIntro" />
+    <result column="com_founder_img" jdbcType="VARCHAR" property="comFounderImg" />
+    <result column="com_create_team_prepare_a" jdbcType="VARCHAR" property="comCreateTeamPrepareA" />
+    <result column="com_create_team_prepare_b" jdbcType="VARCHAR" property="comCreateTeamPrepareB" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    com_create_team_id, com_id, com_founder_name, com_position, com_weibo, com_founder_intro, 
+    com_founder_img, com_create_team_prepare_a, com_create_team_prepare_b
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    com_id, com_founder_name, com_position, com_weibo, com_founder_intro
+    from com_create_team
+    where com_id = #{comId,jdbcType=INTEGER}
+  </select>
+
+
+  <!-- 根据公司id查询 -->
+  <select id="queryByComId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from com_create_team
+    where com_id = #{comId,jdbcType=INTEGER}
+  </select>
+
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from com_create_team
+    where com_create_team_id = #{comCreateTeamId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.internshipElves.entity.ComCreateTeam">
+    insert into com_create_team (com_create_team_id, com_id, com_founder_name, 
+      com_position, com_weibo, com_founder_intro, 
+      com_founder_img, com_create_team_prepare_a, com_create_team_prepare_b
+      )
+    values (#{comCreateTeamId,jdbcType=INTEGER}, #{comId,jdbcType=INTEGER}, #{comFounderName,jdbcType=VARCHAR}, 
+      #{comPosition,jdbcType=VARCHAR}, #{comWeibo,jdbcType=VARCHAR}, #{comFounderIntro,jdbcType=VARCHAR}, 
+      #{comFounderImg,jdbcType=VARCHAR}, #{comCreateTeamPrepareA,jdbcType=VARCHAR}, #{comCreateTeamPrepareB,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.internshipElves.entity.ComCreateTeam">
+    insert into com_create_team
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="comCreateTeamId != null">
+        com_create_team_id,
+      </if>
+      <if test="comId != null">
+        com_id,
+      </if>
+      <if test="comFounderName != null">
+        com_founder_name,
+      </if>
+      <if test="comPosition != null">
+        com_position,
+      </if>
+      <if test="comWeibo != null">
+        com_weibo,
+      </if>
+      <if test="comFounderIntro != null">
+        com_founder_intro,
+      </if>
+      <if test="comFounderImg != null">
+        com_founder_img,
+      </if>
+      <if test="comCreateTeamPrepareA != null">
+        com_create_team_prepare_a,
+      </if>
+      <if test="comCreateTeamPrepareB != null">
+        com_create_team_prepare_b,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="comCreateTeamId != null">
+        #{comCreateTeamId,jdbcType=INTEGER},
+      </if>
+      <if test="comId != null">
+        #{comId,jdbcType=INTEGER},
+      </if>
+      <if test="comFounderName != null">
+        #{comFounderName,jdbcType=VARCHAR},
+      </if>
+      <if test="comPosition != null">
+        #{comPosition,jdbcType=VARCHAR},
+      </if>
+      <if test="comWeibo != null">
+        #{comWeibo,jdbcType=VARCHAR},
+      </if>
+      <if test="comFounderIntro != null">
+        #{comFounderIntro,jdbcType=VARCHAR},
+      </if>
+      <if test="comFounderImg != null">
+        #{comFounderImg,jdbcType=VARCHAR},
+      </if>
+      <if test="comCreateTeamPrepareA != null">
+        #{comCreateTeamPrepareA,jdbcType=VARCHAR},
+      </if>
+      <if test="comCreateTeamPrepareB != null">
+        #{comCreateTeamPrepareB,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.internshipElves.entity.ComCreateTeam">
+    update com_create_team
+    <set>
+      <if test="comId != null">
+        com_id = #{comId,jdbcType=INTEGER},
+      </if>
+      <if test="comFounderName != null">
+        com_founder_name = #{comFounderName,jdbcType=VARCHAR},
+      </if>
+      <if test="comPosition != null">
+        com_position = #{comPosition,jdbcType=VARCHAR},
+      </if>
+      <if test="comWeibo != null">
+        com_weibo = #{comWeibo,jdbcType=VARCHAR},
+      </if>
+      <if test="comFounderIntro != null">
+        com_founder_intro = #{comFounderIntro,jdbcType=VARCHAR},
+      </if>
+      <if test="comFounderImg != null">
+        com_founder_img = #{comFounderImg,jdbcType=VARCHAR},
+      </if>
+      <if test="comCreateTeamPrepareA != null">
+        com_create_team_prepare_a = #{comCreateTeamPrepareA,jdbcType=VARCHAR},
+      </if>
+      <if test="comCreateTeamPrepareB != null">
+        com_create_team_prepare_b = #{comCreateTeamPrepareB,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where com_create_team_id = #{comCreateTeamId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.internshipElves.entity.ComCreateTeam">
+    update com_create_team
+    set com_id = #{comId,jdbcType=INTEGER},
+      com_founder_name = #{comFounderName,jdbcType=VARCHAR},
+      com_position = #{comPosition,jdbcType=VARCHAR},
+      com_weibo = #{comWeibo,jdbcType=VARCHAR},
+      com_founder_intro = #{comFounderIntro,jdbcType=VARCHAR},
+      com_founder_img = #{comFounderImg,jdbcType=VARCHAR},
+      com_create_team_prepare_a = #{comCreateTeamPrepareA,jdbcType=VARCHAR},
+      com_create_team_prepare_b = #{comCreateTeamPrepareB,jdbcType=VARCHAR}
+    where com_create_team_id = #{comCreateTeamId,jdbcType=INTEGER}
+  </update>
+</mapper>

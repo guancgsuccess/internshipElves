@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+			http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+    <mvc:annotation-driven/>
+    <!-- 配置次级控制器-->
+    <context:component-scan base-package="com.internshipElves.controller"/>
+
+    <!--解析配置请求是jsp页面的时候，不需要到次级控制器，直接到web目录下-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/internshipElves/" />
+        <property  name="suffix" value=".jsp"/>
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="redirectHttp10Compatible" value="false"></property>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
+        <property name="order" value="10"></property>
+    </bean>
+
+
+
+    <bean id="viewMappings" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping" >
+        <property name="defaultHandler">
+            <bean class="org.springframework.web.servlet.mvc.UrlFilenameViewController" />
+        </property>
+    </bean>
+    <!--静态资源处理-->
+    <mvc:resources mapping="/css/*" location="internshipElves/style/css/"/>
+    <mvc:resources mapping="/images/*" location="internshipElves/style/images/"/>
+    <mvc:resources mapping="/js/*" location="internshipElves/style/js/"/>
+    <mvc:resources mapping="/upload/*" location="/upload/"/>
+    <mvc:resources mapping="/json/*" location="internshipElves/style/js/"/>
+    <mvc:resources mapping="/css/img/*" location="internshipElves/style/css/img/"/>
+    <mvc:resources mapping="/images/img/*" location="internshipElves/style/images/img/"/>
+
+
+
+    <!-- 配置两个转换器 -->
+    <!--<mvc:annotation-driven conversion-service="conversionService" />-->
+    <!--<mvc:annotation-driven conversion-service="formattingConversionService" />-->
+    <!--<bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">-->
+        <!--<property name="converters">-->
+            <!--<list>-->
+                <!--<bean class="com.chixing.converter.RectangleConverter"/>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!--<bean id="formattingConversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">-->
+        <!--<property name="converters">-->
+            <!--<list>-->
+                <!--<bean class="com.chixing.converter.DateConverter"/>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+
+    <!--配置拦截器interceptor -->
+    <!--<mvc:interceptors>-->
+        <!--<mvc:interceptor>-->
+            <!--<mvc:mapping path="/order/*"/>-->
+            <!--<mvc:mapping path="/cart/*"/>-->
+            <!--<mvc:mapping path="/address/*"/>-->
+            <!--<mvc:mapping path="/mycustomer/getinfo"/>-->
+            <!--<mvc:mapping path="/mycustomer/update"/>-->
+            <!--<bean class="com.chixing.interceptor.CheckLoginInterceptor" ></bean>-->
+        <!--</mvc:interceptor>-->
+    <!--</mvc:interceptors>-->
+
+
+</beans>

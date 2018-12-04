@@ -1,0 +1,100 @@
+.top{
+    width:1000px;
+    height: 200px;
+    background-color: ghostwhite;
+    margin: 140px;
+    padding: 0px;
+    position: relative;
+    bottom: 150px;
+
+}
+.center{
+    width:1000px;
+    height: 200px;
+    background-color: ghostwhite;
+    margin: 140px;
+    padding: 0px;
+    position: relative;
+    bottom: 290px;
+
+}
+.center label{
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+#one{
+   width:100px;
+    height: 150px;;
+    float: left;
+}
+#two{
+    float: left;
+    width:250px ;
+    height: 150px;
+}
+#two span{
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px;
+
+}
+#two label {
+    position: relative;
+    font-size: 15px;
+    color: #999;
+    overflow: hidden;
+}
+#three{
+   position: relative;
+    left: 140px;
+
+}
+#three span{
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px;
+
+}
+#three label {
+    position: relative;
+    font-size: 15px;
+    color: #999;
+    overflow: hidden;
+}
+
+#four{
+    position: relative;
+    bottom:65px;
+   float: right;
+}
+#four span{
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px;
+
+}
+#four label {
+    position: relative;
+    font-size: 15px;
+    color: #999;
+    overflow: hidden;
+}
+.center li{
+    display: inline;
+    padding:48px;
+}
+
+#images{
+    width: 100px;
+    height: 130px;
+
+}
+
+
+
